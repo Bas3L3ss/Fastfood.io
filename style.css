@@ -183,25 +183,35 @@ img{
     gap:1rem;
 }
 .navigation .wrapper .navigation__nav .nav__ul li{
-    position: relative;
-    font-size:clamp(15px, 1.5vw, 60px) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:clamp(17px, 1.5vw, 30px);
+    line-height: 75px;
+    height: 75px;
 }
 .navigation .wrapper .navigation__nav .nav__ul li a{
+    height: 100%;
     display: inline-block;
 }
 .navigation .wrapper .navigation__nav .nav__ul li a::before{
     content: "";
     position: absolute;
-    top: 100%;
+    bottom :15px;
     left:0;
     width: 0;
     height: 5px;
     background-color: var(--Bg-color-end);
     transition: all 0.3s;
 }
-.navigation  .wrapper .navigation__nav .nav__ul li a:hover:before {
+.navigation  .wrapper .navigation__nav .nav__ul li:hover a:before {
+    cursor: pointer;
     width: 100%;
 }
+.navigation  .wrapper .navigation__nav .nav__ul li:hover a {
+    color: var(--Hover-color);
+}
+
 
 .navigation .wrapper .navigation__button{
     padding: 0;
