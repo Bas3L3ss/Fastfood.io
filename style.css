@@ -27,7 +27,7 @@ input ,button , textarea{
     --nav-Bg-color:rgba(51, 0, 0, 0.527);
     --Hover-color:rgb(249, 249, 200);
     --Focus-outline:1px solid #fff;
-    --Hero-color:rgb(0, 0, 0);
+    --Hero-color:rgb(34, 1, 1);
     --Bg-color-end:rgb(162, 0, 0);
     --Padding-block:100px;
     --Lines-color:black;
@@ -45,7 +45,7 @@ input ,button , textarea{
         --nav-Bg-color:rgba(169, 76, 76, 0.527);
         --Hover-color:rgb(210, 210, 21);
         --Focus-outline:1px solid #fff;
-        --Hero-color:rgb(34, 1, 1);
+        --Hero-color:rgb(0, 0, 0);
         --Bg-color-end:rgb(162, 0, 0);
         --Padding-block:100px;
         --Lines-color:black;
@@ -65,9 +65,9 @@ input ,button , textarea{
 /* || GENERAL STYLE */
 
 html{
+    line-height: 2rem;
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
-    line-height: 2rem;
     overflow-x: hidden;
 }
 .wrapper{
@@ -100,7 +100,7 @@ section{
     
 }
 p{
-    
+
     margin-top: 10px;
     
 }
@@ -116,11 +116,11 @@ img{
     z-index: 10000;
     bottom: 100px;
     right: 20px;
-   padding-block: 3px;
-   padding-inline: 10px;
+    padding-bottom:5px ;
+    padding-inline: 10px;
     display: inline-block;
     border: 3px solid;
-    border-radius: 2vw;
+    border-radius: 50px;
     animation: up linear ;
     animation-timeline: scroll();
 }
@@ -172,10 +172,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: navChange linear;
-    animation-timeline: scroll(root);
 }
-
 .navigation .navigation__logo{
     display: flex;
     align-items: center; 
@@ -184,18 +181,13 @@ img{
 .navigation .navigation__logo h1{
     font-size: clamp(9px, 3.4vw, 30px);
 }
-.navigation .navigation__logo img{
-    box-shadow: none;
-    width: 25%;
-}
-
 .navigation .wrapper .navigation__nav .nav__ul{
     display: flex;
     gap:1rem;
 }
 .navigation .wrapper .navigation__nav .nav__ul li{
     position: relative;
-    font-size:clamp(14px, 1.5vw, 60px) ;
+    font-size:clamp(15px, 1.5vw, 60px) ;
 }
 .navigation .wrapper .navigation__nav .nav__ul li a{
 
@@ -249,11 +241,10 @@ img{
     background-size: cover;
  }
 .main__hero{
-    line-height: normal;
     width: 100%;
     height: 100vh;
     display: flex;
-    
+    line-height: normal;
     justify-content: flex-end;
     align-items: center;
 }
@@ -821,7 +812,6 @@ footer{
         z-index: -1000;
     }
     .navigation .wrapper .navigation__button{
-        
         display: block;
     }
     .navigation{
@@ -990,15 +980,15 @@ display: none;
         }
         
     }
-
     .navigation{
         box-shadow: 0 0 5px 0.5px grey;
     }
     .navigation .wrapper{
        height: 125px;
+       animation: navChange linear;
+       animation-timeline: scroll(root);
     }
    
-
     .navigation .wrapper .navigation__button{
         display: none;
     }
