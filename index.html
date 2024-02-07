@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="short icon" href="img/Logo.png" />
+    <script defer src="app.js"></script>
+    <title>Fast Food</title>
+  </head>
+  <body>
+    <!-- UP  -->
+    <div class="up"><a href="#">&#8593;</a></div>
+    <!-- Loading -->
+    <div class="loader"></div>
+    <!-- WEB -->
+    <header class="navigation">
+      <div class="wrapper">
+        <div class="navigation__logo loadnav">
+          <img src="/img/Logo.png" alt="" />
+          <a href="#"><h1>FastFood.io</h1></a>
+        </div>
+        <button class="navigation__button">
+          <img class="Open" src="img/button.png" alt="" />
+          <img class="Close hidden" src="img/button2.png" alt="" />
+        </button>
+        <nav class="navigation__nav nav">
+          <ul class="nav__ul">
+            <li class="loadnav ms0"><a href="#">Home</a></li>
+            <li class="loadnav ms200"><a href="#2">Suggestion</a></li>
+            <li class="loadnav ms400"><a href="#3">Analytics</a></li>
+            <li class="loadnav ms600"><a href="#4">Charity</a></li>
+            <li class="loadnav ms800"><a href="#5">Creator</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="hidden navigation__nav nav">
+      <ul class="nav__ul">
+        <li><a href="#">Home</a></li>
+        <li><a href="#2">Suggestion</a></li>
+        <li><a href="#3">Analytics</a></li>
+        <li><a href="#4">Charity</a></li>
+        <li><a href="#5">Creator</a></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <main class="main">
+        <section id="0" class="main__hero">
+          <div class="hero__carousel">
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-btn-1"
+              class="slide-btn"
+              onclick="setInt();"
+              checked
+            />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-btn-2"
+              class="slide-btn"
+              onclick="setInt();"
+            />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-btn-3"
+              class="slide-btn"
+              onclick="setInt();"
+            />
+            <input
+              type="radio"
+              name="carousel"
+              id="slide-btn-4"
+              class="slide-btn"
+              onclick="setInt();"
+            />
+            <div class="carousel__slide one parallax-effect"></div>
+            <div class="carousel__slide two parallax-effect"></div>
+            <div class="carousel__slide three parallax-effect"></div>
+            <div class="carousel__slide four parallax-effect"></div>
+            <div class="labels">
+              <label for="slide-btn-1"></label>
+              <label for="slide-btn-2"></label>
+              <label for="slide-btn-3"></label>
+              <label for="slide-btn-4"></label>
+            </div>
+          </div>
+          <!--<img src="img/hero.jpg" alt="" /> -->
+          <div class="hero__text loadhero">
+            <h1>Fast Food</h1>
+            <h2>what should you know about it?</h2>
+            <a href="#1">Explore</a>
+          </div>
+          <div class="hero__btn"></div>
+        </section>
+
+        <section id="1" class="main__noidung1">
+          <div class="wrapper">
+            <h1 class="hidden">What is fast food?</h1>
+            <img class="effect" src="img/noidung1.jpg" alt="" />
+            <img class="hidden effect" src="img/noidung11.jpg" alt="" />
+            <div class="noidung1__container effect">
+              <h1 class="effect">What is fast food?</h1>
+              <div class="container__p">
+                <p>
+                  Fast food, or "fastfood" in English, refers to quickly
+                  prepared and served dishes. It encompasses meals with
+                  expedited service, often featuring pre-cooked ingredients
+                  served in take-away packaging. This compact, aromatic, and
+                  visually appealing cuisine caters predominantly to young
+                  people and teenagers in urban areas. A popular trend in big
+                  cities, fast food aligns with the modern, fast-paced lifestyle
+                  of the youth, seen as a convenient and fitting choice for
+                  their on-the-go routines.
+                </p>
+                <p>
+                  Fast food establishments thrive on efficiency, streamlining
+                  the culinary process to meet the demands of a bustling
+                  clientele. The menu typically includes a variety of options,
+                  from burgers and fries to wraps and salads, providing a quick
+                  fix for hunger pangs. The standardized recipes and
+                  assembly-line approach contribute to consistent taste and
+                  speedy service. While criticized for its potential health
+                  implications, fast food remains a guilty pleasure for many,
+                  offering a break.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="2" class="main__noidung2 noidung2">
+          <div class="wrapper">
+            <h1>Suggestions!!!</h1>
+            <div class="noidung2__container container">
+              <div class="container__text">
+                <h2>McDonald's</h2>
+                <p>
+                  My kids consistently ask for McDonald's, and while some may
+                  frown upon it, I confess my enduring fondness for the golden
+                  arches—McDonald's holds a special place in my heart.
+                </p>
+              </div>
+              <div class="container__text">
+                <h2>KFC</h2>
+                <p>
+                  With over 5,600 outlets in China, Kentucky Fried Chicken (KFC)
+                  stands as the unrivaled American fast-food giant, firmly
+                  establishing its dominance in the country's culinary
+                  landscape.
+                </p>
+              </div>
+              <div class="container_text">
+                <h2>Popeyes</h2>
+                <p>
+                  Craving crispy chicken? Popeyes assures you the crispiest
+                  experience, a signature that sets it apart. Undeniably
+                  crispier than many rivals, it stands out with a distinctive
+                  and enticing menu.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__noidung3 noidung3">
+          <div class="wrapper">
+            <h1>Do you know?</h1>
+            <div class="container__noidung3 container">
+              <div class="container__left effect">
+                <!-- Left -->
+                <img src="img/nd3mc.jpg" alt="" />
+                <div class="container__textLeft">
+                  <h2>McDonald's history</h2>
+                  <p>
+                    Founded in 1940 by Richard and Maurice McDonald, McDonald's
+                    has evolved from a small barbecue restaurant in San
+                    Bernardino, California, to a global fast-food giant. Ray
+                    Kroc, a Multimixer milkshake machine sales agent, joined in
+                    1954, transforming the brand into a franchise powerhouse.
+                    The iconic Golden Arches officially became the symbol in
+                    1963. McDonald's introduced the Big Mac in 1968 and the
+                    Happy Meal in 1979, solidifying its status as a cultural
+                    phenomenon.
+                  </p>
+                </div>
+              </div>
+              <div class="container__right effect">
+                <!-- Right -->
+                <div class="container__textRight">
+                  <h2>KFC's history</h2>
+                  <p>
+                    Founded in 1930 by Colonel Harland Sanders, Kentucky Fried
+                    Chicken (KFC) originated as a roadside restaurant in Corbin,
+                    Kentucky. Sanders' secret blend of 11 herbs and spices
+                    contributed to the distinctive flavor of his fried chicken.
+                    The franchise model emerged in 1952 when he partnered with
+                    Pete Harman in Salt Lake City. By 1964, KFC had expanded
+                    internationally, marking its presence in Canada and the
+                    United Kingdom. In 1966, the company was acquired by
+                    Heublein Inc.
+                  </p>
+                </div>
+                <img src="/img/nd3kfc.jpg" alt="KFC" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__slides">
+          <div class="slides__container scroller">
+            <ul class="tag-list scroller__inner">
+              <li>
+                <img
+                  class="slider1"
+                  src="/img/slider.jpg"
+                  alt="picture of chicken"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider2"
+                  src="/img/slider2.jpg"
+                  alt="picture of pizza"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider3"
+                  src="/img/slider3.jpg"
+                  alt="picture of french fries"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider4"
+                  src="/img/slider4.jpg"
+                  alt="picture of hamburger
+                "
+                />
+              </li>
+              <li>
+                <img
+                  class="slider5"
+                  src="/img/slider5.jpg"
+                  alt="picture of french fries2"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider6"
+                  src="/img/slider6.jpg"
+                  alt="picture of fried chicken"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="main__noidung4 noidung4">
+          <div class="wrapper effect">
+            <h1>Be awared!!</h1>
+            <div class="noidung4__container">
+              <p>
+                Although fast food is gradually becoming a symbol of modern
+                lifestyle But these foods bring many harmful effects to your
+                child's health People. Here are some limitations of Fastfood
+                that you need to pay attention to: Fastfood contains a lot of
+                calories and cholesterol, so it can cause obesity those who eat
+                too much
+              </p>
+              <p>
+                Besides, studies show that using Fast food and carbonated soft
+                drinks, soda... regularly are not good for the liver. Friend
+                Need to regularly exercise to burn excess fat absorbed from fast
+                food products. Fastfood often contains a lot of calories and
+                fat.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="3" class="main__phantich phantich">
+          <div class="wrapper effect">
+            <h1>How are people affected around the world?</h1>
+            <div class="phantich__container container">
+              <div class="container__death">
+                <h3>10000</h3>
+                <h2>Death</h2>
+              </div>
+              <div class="container__death">
+                <h3>10000</h3>
+                <h2>Heart issue</h2>
+              </div>
+              <div class="container__death">
+                <h3>USA</h3>
+                <h2>Suffered the most</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="4" class="main__contact contact">
+          <div class="wrapper">
+            <img src="/img/contact.jpg" alt="Charity" />
+            <div class="contact__text">
+              <h1 class="effect">We need help!!</h1>
+              <p class="effect">
+                XYZ Foundation seeks aid for impactful change. Your donations
+                empower communities, fund research, and ensure transparent,
+                accountable resource distribution.
+              </p>
+              <a class="effect" href="#"> Contact Us</a>
+            </div>
+          </div>
+        </section>
+        <section id="5" class="main__thanhvien thanhvien">
+          <div class="wrapper">
+            <h1>We made this!!</h1>
+            <div class="thanhvien__grid">
+              <div class="thanhvien__container tuan">
+                <h2 class="name">Phan Huu Tuan</h2>
+                <p class="id">22000604</p>
+                <img src="/img/Tuan.jpg" alt="" />
+              </div>
+              <div class="thanhvien__container hung">
+                <h2 class="name">Pham Thien Hung</h2>
+                <p class="id">22000988</p>
+                <img src="img/Hung.jpg" alt="" />
+              </div>
+              <div class="thanhvien__container long">
+                <h2 class="name">Cao Thanh Long</h2>
+                <p class="id">22001124</p>
+                <img src="/img/Long.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__content content">
+          <div class="content__col1 col1 wrapper">
+            <div class="col1__content1">
+              <h3>About us</h3>
+              <div class="content1__imgs">
+                <img src="img/facebook.png" alt="" />
+                <img src="img/Twitter.png" alt="" />
+                <img src="img/Instagram.png" alt="" />
+              </div>
+            </div>
+
+            <div class="col1__content2">
+              <h3>Go Back</h3>
+              <nav class="col2__nav nav">
+                <ul class="nav__ul">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Introduction</a></li>
+                  <li><a href="">Analytics</a></li>
+                  <li><a href="">Charity</a></li>
+                  <li><a href="">Creator</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="col1__content3">
+              <h3>Contact Us</h3>
+              <p>
+                Contact Us Tel: <b> +1 225-777-1291 </b> <br />
+                Address: <b> 3091 Coventry Court</b> <br />
+                Email : <b>morris.ritchie@nicolas.biz</b>
+              </p>
+            </div>
+          </div>
+          <div class="footer2__color">
+            <div class="content__col2 col2 wrapper">
+              <div class="col2__start">
+                <p>&copy; copyright 2024</p>
+              </div>
+              <div class="col2__end">
+                <a href=""><p>FastFood.io</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
