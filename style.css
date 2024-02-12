@@ -457,7 +457,7 @@ img{
     backdrop-filter: blur(5px);
 }
 .main__phantich{
-    background-image: url(/img/phantich.jpg);
+    background-image: url(img/phantich.jpg);
     background-size: 100% 100%;
 
 }
