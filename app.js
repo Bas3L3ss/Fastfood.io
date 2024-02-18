@@ -52,15 +52,6 @@ window.addEventListener("load", ()=>{
     }
     
 })
-/* window.addEventListener("load", ()=>{
-    const loader = document.querySelector(".loader")
-
-    loader.classList.add('loader--hidden')
-    loader.addEventListener("transitionend" ,()=>{
-        document.body.removeChild(loader)
-    })
-})
- */
 /* || MENU */
 const Button= document.querySelector(".navigation__button");
 const Open= document.querySelector(".Open");
@@ -98,6 +89,8 @@ var int;
 /* FORM */
 const formEl = document.querySelector(".form__container")
 function open_Form(){
-  console.log("clicked")
-formEl.classList.toggle("hidden")
+formEl.classList.remove("hidden")
+}
+function close_Form(){
+formEl.classList.add("hidden")
 }
