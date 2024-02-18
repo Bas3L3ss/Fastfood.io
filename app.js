@@ -95,3 +95,9 @@ var int;
       }
       setInt();
 
+/* FORM */
+const formEl = document.querySelector(".form__container")
+function open_Form(){
+  console.log("clicked")
+formEl.classList.toggle("hidden")
+}

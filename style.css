@@ -16,7 +16,9 @@ img{
 input ,button , textarea{
     font:inherit;
 }
-
+a , button{
+    cursor: pointer;
+}
 
 /* || VARIABLES */
 :root{
@@ -528,7 +530,65 @@ img{
     color: white;
     background-color: var(--Lines-color);
 }
-
+/* || FORM */
+form button{
+    border: none;
+    box-shadow: none;
+    background-color: var(--Bg-color2);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.form__container.hidden{
+    z-index: -1;
+    opacity: 0;
+}
+.form__container{
+    transition: all 1s;
+    opacity: 1;
+    min-width: 0;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    position:fixed ;
+    z-index: 100000000000;
+    backdrop-filter: blur(10px);
+}
+.form__group{
+    margin-top:10px ;
+    display: flex;
+    align-items: center;
+   
+}
+.form__group :is(textarea , input){
+    margin-left: 10px;
+    min-width: 0;
+}
+form h1{
+    color: var(--Hover-color);
+}
+form{
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    border: 1px solid red;
+    background-color: var(--Bg-color);
+    height: fit-content;
+    margin-inline: auto;
+    
+}
+textarea{
+    columns: 10;
+}
+form input[type="submit"]{
+   margin-block: 25px;
+   margin-left: 25px;
+   padding: 5px;
+   border-radius: 50px;
+}
 /* || THANHVIEN */
 
 .main__thanhvien{
@@ -939,7 +999,7 @@ display: none;
         padding-inline: 0;
         font-size: 5vw;
     }
-    /* CONTACT MQ */
+    /* ||CONTACT MQ */
     .main__contact .wrapper{
         display: grid;
         grid-template-columns: 1fr;
@@ -950,6 +1010,10 @@ display: none;
     }
     .main__contact .wrapper img{
        padding: 0;
+    }
+    /* ||FORM MQ */
+    form{
+        width: 100%;
     }
     /* ||FOOTER MQ */
      .content__col1{
@@ -1211,6 +1275,10 @@ display: none;
 {
     transform: translateY(0);  
     filter: blur(0);
+}
+/* FORM MQ2*/
+form{
+    width: 75%;
 }
 /* || THANHVIEN MQ2*/
 .main__thanhvien .thanhvien__grid{

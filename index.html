@@ -9,6 +9,50 @@
     <title>Fast Food</title>
   </head>
   <body>
+    <!-- CONTACT__FORM -->
+    <div class="form__container hidden">
+      <form action="#" method="post">
+        <h1>Contact Us!</h1>
+        <button type="button" onclick="open_Form()" class="close_Form">
+          <img class="close_form" src="img/button2.png" alt="" />
+        </button>
+        <div class="form__group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="  Name"
+            required
+          /><br /><br />
+        </div>
+        <div class="form__group">
+          <label for="tel">Telephone:</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            placeholder="  Phone nums"
+            pattern="[0-9]*"
+            required
+          />
+          <!--   <small>Format: 123-456-7890</small><br /><br /> -->
+        </div>
+        <div class="form__group">
+          <label for="comment">Comment:</label><br />
+          <textarea
+            cols="30"
+            placeholder="what do you think?"
+            id="comment"
+            name="comment"
+            rows="4"
+            style="resize: none"
+          ></textarea
+          ><br />
+        </div>
+        <input type="submit" value="Send contact" />
+      </form>
+    </div>
     <!-- UP  -->
     <div class="up"><a href="#">&#8593;</a></div>
     <!-- Loading -->
@@ -305,7 +349,7 @@
                 empower communities, fund research, and ensure transparent,
                 accountable resource distribution.
               </p>
-              <a class="effect" href="#"> Contact Us</a>
+              <a onclick="open_Form()" class="effect open_Form"> Contact Us</a>
             </div>
           </div>
         </section>
