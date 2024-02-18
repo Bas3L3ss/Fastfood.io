@@ -297,7 +297,9 @@ img{
 
 
 /* || NOIDUNG1 */
-
+.main__noidung1 h1{
+    color: var(--Hover-color);
+}
 .main__noidung1{
     padding-block:var(--Padding-block) ;
     background-color: var(--Bg-color2);
