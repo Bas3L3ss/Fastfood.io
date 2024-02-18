@@ -663,7 +663,7 @@ footer{
     margin-right: 10px;
     cursor: pointer;
     box-shadow: none;
-    width: 50px;
+    width: 55px;
     height: 50px;
 }
 .content__col1{
@@ -865,25 +865,29 @@ footer{
     .body{
         transition: all 1s;
     }
-    .body.worked{
+    .body.closed{
         transform: translateY(200px);
     }
     /* || NAVIGATION MQ */
     .hidden.navigation__nav{
-        margin-top: 25px;
+        margin-top: 10px;
         width: 100%;
         display: block;
         position: absolute;
-        
     }
     .hidden.navigation__nav .nav__ul{
         display: flex;
-        align-items: center;
+        gap: 6px;
         flex-direction: column;
+        width: 100%;
         justify-content: center;
     }
     .hidden.navigation__nav .nav__ul a{
-        border-bottom: 1px solid;
+        padding-right: 100%;
+        padding-top: 12px;
+    }
+    .hidden.navigation__nav .nav__ul a:not(.last){
+        border-bottom: 1px solid white;
     }
     .navigation .wrapper .navigation__nav { 
         display: none;

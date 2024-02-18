@@ -58,11 +58,17 @@ const Open= document.querySelector(".Open");
 const Close= document.querySelector(".Close");
 const Body = document.querySelector(".body");
 
+function toggleButton(){
+  Body.classList.toggle("closed")
+  Open.classList.toggle("hidden")
+  Close.classList.toggle("hidden")
+}
 Button.addEventListener("click", ()=>{
-    Body.classList.toggle("worked")
-    Open.classList.toggle("hidden")
-    Close.classList.toggle("hidden")
+    toggleButton()
 })
+function close_Nav(){
+  toggleButton()
+}
 
 /* || HERO */
 var int;
