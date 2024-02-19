@@ -88,7 +88,7 @@ var int;
               return;
             }
           }
-        }, 3500);
+        }, 4000);
       }
       setInt();
 
