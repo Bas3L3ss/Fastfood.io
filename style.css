@@ -40,6 +40,9 @@ html:has(.loader) ::-webkit-scrollbar {
     --Scrollbar-track-thumb:rgb(169, 1, 1);
     --Scrollbar-track-hover:rgb(250, 0, 0);
     --Loader: #ddd;
+    --Hero-Overlay-1:rgba(34, 3, 3, 0.444);
+    --Hero-Overlay-2:rgba(45, 2, 2, 0.444);
+    --Form-hover:hsl(0, 92%, 20%);
 }
 
 @media (prefers-color-scheme:light){
@@ -54,10 +57,13 @@ html:has(.loader) ::-webkit-scrollbar {
         --Bg-color-end:rgb(162, 0, 0);
         --Padding-block:100px;
         --Lines-color:black;
-        --Scrollbar-track-color:rgb(118, 41, 41);
-        --Scrollbar-track-thumb:rgb(169, 1, 1);
-        --Scrollbar-track-hover:rgb(250, 0, 0);
+        --Scrollbar-track-color:rgb(235, 170, 170);
+        --Scrollbar-track-thumb:rgb(225, 124, 124);
+        --Scrollbar-track-hover:rgb(205, 134, 134);
         --Loader: #ddd;
+        --Hero-Overlay-1:rgba(100, 80, 80, 0.444);
+        --Hero-Overlay-2:rgba(90, 2, 2, 0.444);
+        --Form-hover:hsl(0, 24%, 33%);
     }
 }
 
@@ -547,7 +553,7 @@ form .close_Form{
     right: 15px;
 }
 form .close_Form:is(:hover ,:focus-visible){
-   background-color: hsl(0, 92%, 20%);
+   background-color: var(--Form-hover);
 }
 .form__container.hidden{
     z-index: -1;
@@ -913,7 +919,7 @@ footer{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(45, 2, 2, 0.444);
+        background-color: var(--Hero-Overlay-2);
       }
     .main__hero::before{
         content: "";
@@ -1025,7 +1031,7 @@ display: none;
         grid-template-columns: 1fr;
     }
     .main__contact .wrapper .contact__text{
-        background-color: red;
+        background-color: var(--Scrollbar-track-hover);
         padding-block: var(--Padding-block);
     }
     .main__contact .wrapper img{
@@ -1140,7 +1146,7 @@ display: none;
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(34, 3, 3, 0.444);
+        background-color: var(--Hero-Overlay-1);
       }
       .hero__carousel .one {
         background-image:url(img/hero1.jpg);
@@ -1153,7 +1159,7 @@ display: none;
         background-image: url(img/hero3.jpg) ;
       }
       .hero__carousel .four {
-        background-image: url("img/hero4.jpg");
+        background-image: url(img/hero4.jpg);
       }
       #slide-btn-1:checked ~ .one,
       #slide-btn-2:checked ~ .two,
@@ -1264,7 +1270,7 @@ display: none;
     grid-template-columns: 1fr 0.65fr;
 }
 .main__contact .wrapper .contact__text{
-    background-color: red;
+    background-color: var(--Scrollbar-track-hover);
     background-image: none;
 }
 .main__contact .wrapper img{
