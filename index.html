@@ -16,15 +16,16 @@
         <button type="button" onclick="close_Form()" class="close_Form">
           <img class="close_form" src="img/button2.png" alt="" />
         </button>
+
         <div class="form__group">
           <label for="name">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="  Name"
+            placeholder="Name"
             required
-          /><br /><br />
+          />
         </div>
         <div class="form__group">
           <label for="tel">Telephone:</label>
@@ -32,14 +33,23 @@
             type="tel"
             id="tel"
             name="tel"
-            placeholder="  Phone nums"
+            placeholder="Phone nums"
             pattern="[0-9]*"
             required
           />
-          <!--   <small>Format: 123-456-7890</small><br /><br /> -->
+        </div>
+        <div class="form__group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            placeholder="Email"
+            id="email"
+            name="email"
+            required
+          />
         </div>
         <div class="form__group form__group-last">
-          <label for="comment">Comments:</label><br />
+          <label for="comment">Comments:</label>
           <textarea
             cols="30"
             placeholder="What do you think?"
@@ -47,10 +57,11 @@
             name="comment"
             rows="4"
             style="resize: none"
-          ></textarea
-          ><br />
+          ></textarea>
         </div>
-        <input type="submit" value="Send contact" />
+        <div class="form__input">
+          <input type="submit" value="Send contact" />
+        </div>
       </form>
     </div>
     <!-- UP  -->
@@ -70,10 +81,14 @@
         <nav class="navigation__nav nav">
           <ul class="nav__ul">
             <li class="loadnav ms0"><a href="#">Home</a></li>
-            <li class="loadnav ms200"><a href="#2">Suggestion</a></li>
-            <li class="loadnav ms400"><a href="#3">Analytics</a></li>
-            <li class="loadnav ms600"><a href="#4">Charity</a></li>
-            <li class="loadnav ms800"><a href="#5">Creator</a></li>
+            <li class="loadnav ms200" id="state">
+              <a href="#2">Suggestion</a>
+            </li>
+            <li class="loadnav ms400" id="state">
+              <a href="#3">Analytics</a>
+            </li>
+            <li class="loadnav ms600" id="state"><a href="#4">Charity</a></li>
+            <li class="loadnav ms800" id="state"><a href="#5">Creator</a></li>
           </ul>
         </nav>
       </div>
@@ -173,7 +188,7 @@
             </div>
           </div>
         </section>
-        <section id="2" class="main__noidung2 noidung2">
+        <section id="2" class="main__noidung2 noidung2 triggerState">
           <div class="wrapper">
             <h1>Suggestions!!!</h1>
             <div class="noidung2__container container">
@@ -194,7 +209,7 @@
                   landscape.
                 </p>
               </div>
-              <div class="container_text">
+              <div class="container_text center-alignment">
                 <h2>Popeyes</h2>
                 <p>
                   Craving crispy chicken? Popeyes assures you the crispiest
@@ -320,7 +335,7 @@
             </div>
           </div>
         </section>
-        <section id="3" class="main__phantich phantich">
+        <section id="3" class="main__phantich phantich triggerState">
           <div class="wrapper effect">
             <h1>How are people affected around the world?</h1>
             <div class="phantich__container container">
@@ -332,14 +347,14 @@
                 <h3>10000</h3>
                 <h2>Heart issue</h2>
               </div>
-              <div class="container__death">
+              <div class="container__death center-alignment">
                 <h3>USA</h3>
                 <h2>Suffered the most</h2>
               </div>
             </div>
           </div>
         </section>
-        <section id="4" class="main__contact contact">
+        <section id="4" class="main__contact contact triggerState">
           <div class="wrapper">
             <img src="img/contact.jpg" alt="Charity" />
             <div class="contact__text">
@@ -353,7 +368,7 @@
             </div>
           </div>
         </section>
-        <section id="5" class="main__thanhvien thanhvien">
+        <section id="5" class="main__thanhvien thanhvien triggerState">
           <div class="wrapper">
             <h1>Our Members</h1>
             <div class="thanhvien__grid">
@@ -367,7 +382,7 @@
                 <p class="id">22000988</p>
                 <img src="img/Hung.jpg" alt="" />
               </div>
-              <div class="thanhvien__container long">
+              <div class="thanhvien__container long center-alignment">
                 <h2 class="name">Cao Thanh Long</h2>
                 <p class="id">22001124</p>
                 <img src="img/Long.jpg" alt="" />
