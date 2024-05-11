@@ -99,7 +99,6 @@ function close_Form() {
 const menuStateDom = document.querySelectorAll("#state");
 const triggerStateDom = document.querySelectorAll(".triggerState");
 const firstTriggerStateDomPosition = triggerStateDom[0].offsetTop / 2;
-console.log(firstTriggerStateDomPosition);
 for (let i = 0; i < menuStateDom.length; i++) {
   window.addEventListener("scroll", () => {
     const triggerStateDomPosition = triggerStateDom[i].offsetTop;
