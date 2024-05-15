@@ -12,65 +12,79 @@
     <!-- CONTACT__FORM -->
     <div class="form__container hidden">
       <form action="#" method="post">
-        <h1>Contact Form:</h1>
-        <button type="button" onclick="close_Form()" class="close_Form">
-          <img class="close_form" src="img/button2.png" alt="" />
+        <h1 class="form__heading">Contact Form:</h1>
+        <p class="form__subheading">
+          Your kindness is incredible. Thank you for making such a meaningful
+          difference in the lives of others!
+        </p>
+        <button type="button" onclick="close_Form()" class="close_form">
+          <img class="close_form-img" src="img/button2.png" alt="" />
         </button>
-
-        <div class="form__group">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
+        <div class="form__wrapper">
+          <div class="form__group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              placeholder="Phone nums"
+              pattern="[0-9]*"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form__group form__group-last">
+            <textarea
+              cols="30"
+              placeholder="What do you think?"
+              id="comment"
+              name="comment"
+              rows="4"
+              style="resize: none"
+            ></textarea>
+          </div>
         </div>
-        <div class="form__group">
-          <label for="tel">Telephone:</label>
-          <input
-            type="tel"
-            id="tel"
-            name="tel"
-            placeholder="Phone nums"
-            pattern="[0-9]*"
-            required
-          />
-        </div>
-        <div class="form__group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            placeholder="Email"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-        <div class="form__group form__group-last">
-          <label for="comment">Comments:</label>
-          <textarea
-            cols="30"
-            placeholder="What do you think?"
-            id="comment"
-            name="comment"
-            rows="4"
-            style="resize: none"
-          ></textarea>
-        </div>
-        <div class="form__input">
-          <input type="submit" value="Send contact" />
+        <div class="form__cta">
+          <div class="form__imgs">
+            <a class="imgs__anchor" href="#">
+              <img src="img/Instagram.png" alt="" />
+            </a>
+            <a class="imgs__anchor" href="#">
+              <img src="img/facebook.png" alt="" />
+            </a>
+            <a class="imgs__anchor" href="#">
+              <img src="img/Twitter.png" alt="" />
+            </a>
+          </div>
+          <div class="form__input">
+            <input type="submit" value="Send contact" />
+          </div>
         </div>
       </form>
     </div>
     <!-- UP  -->
-    <div class="up"><a href="#">&#8593;</a></div>
+    <div class="up hiddenUp"><a href="#">&#8593;</a></div>
     <!-- Loading -->
     <div class="loader"></div>
     <!-- WEB -->
-    <header class="navigation">
-      <div class="wrapper">
+    <nav class="navigation">
+      <div class="wrapper heightChange">
         <div class="navigation__logo loadnav">
           <a href="#"><h1>FastFood.io</h1></a>
         </div>
@@ -92,7 +106,7 @@
           </ul>
         </nav>
       </div>
-    </header>
+    </nav>
     <nav class="hidden navigation__nav nav">
       <ul class="nav__ul">
         <li><a onclick="close_Nav()" href="#">Home</a></li>
@@ -147,7 +161,6 @@
               <label for="slide-btn-4"></label>
             </div>
           </div>
-          <!--<img src="img/hero.jpg" alt="" /> -->
           <div class="hero__text loadhero">
             <h1>Fast Food</h1>
             <h2>what should you know about it?</h2>
@@ -188,9 +201,79 @@
             </div>
           </div>
         </section>
+        <section class="main__slides autoRun">
+          <div class="slides__container scroller">
+            <ul class="tag-list scroller__inner">
+              <li>
+                <img
+                  class="slider1"
+                  src="img/Slider1-autoRun.png"
+                  alt="picture of chicken"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider2"
+                  src="img/Slider2-autoRun.png"
+                  alt="picture of pizza"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider3"
+                  src="img/Slider3-autoRun.png"
+                  alt="picture of french fries"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider4"
+                  src="img/Slider4-autoRun.png"
+                  alt="picture of hamburger
+                "
+                />
+              </li>
+              <li>
+                <img
+                  class="slider5"
+                  src="img/Slider5-autoRun.png"
+                  alt="picture of french fries2"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider6"
+                  src="img/Slider6-autoRun.png"
+                  alt="picture of fried chicken"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider7"
+                  src="img/Slider7-autoRun.png"
+                  alt="picture of fried chicken"
+                />
+              </li>
+              <li>
+                <img
+                  class="slider8"
+                  src="img/Slider8-autoRun.png"
+                  alt="picture of fried chicken"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="hsl(0, 92%, 15%)"
+            fill-opacity="1"
+            d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,90.7C336,107,384,181,432,197.3C480,213,528,171,576,160C624,149,672,171,720,165.3C768,160,816,128,864,122.7C912,117,960,139,1008,154.7C1056,171,1104,181,1152,192C1200,203,1248,213,1296,181.3C1344,149,1392,75,1416,37.3L1440,0L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
+          ></path>
+        </svg> -->
         <section id="2" class="main__noidung2 noidung2 triggerState">
           <div class="wrapper">
-            <h1>Suggestions!!!</h1>
+            <h1>Suggestions</h1>
             <div class="noidung2__container container">
               <div class="container__text">
                 <h2>McDonald's</h2>
@@ -221,6 +304,13 @@
             </div>
           </div>
         </section>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="hsl(0, 92%, 15%)"
+            fill-opacity="1"
+            d="M0,160L24,165.3C48,171,96,181,144,186.7C192,192,240,192,288,165.3C336,139,384,85,432,85.3C480,85,528,139,576,176C624,213,672,235,720,224C768,213,816,171,864,165.3C912,160,960,192,1008,176C1056,160,1104,96,1152,106.7C1200,117,1248,203,1296,218.7C1344,235,1392,181,1416,154.7L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"
+          ></path>
+        </svg> -->
         <section class="main__noidung3 noidung3">
           <div class="wrapper">
             <h1>Do you know?</h1>
@@ -372,19 +462,28 @@
           <div class="wrapper">
             <h1>Our Members</h1>
             <div class="thanhvien__grid">
-              <div class="thanhvien__container tuan">
-                <h2 class="name">Phan Huu Tuan</h2>
-                <p class="id">22000604</p>
+              <div class="thanhvien__container">
+                <div class="thanhvien__container-info">
+                  <p class="id">22000604</p>
+                  <h2 class="name">Phan Huu Tuan</h2>
+                  <a href="#">See More</a>
+                </div>
                 <img src="img/Tuan.jpg" alt="" />
               </div>
-              <div class="thanhvien__container hung">
-                <h2 class="name">Pham Thien Hung</h2>
-                <p class="id">22000988</p>
+              <div class="thanhvien__container">
+                <div class="thanhvien__container-info">
+                  <p class="id">22000988</p>
+                  <h2 class="name">Pham Thien Hung</h2>
+                  <a href="#">See More</a>
+                </div>
                 <img src="img/Hung.jpg" alt="" />
               </div>
-              <div class="thanhvien__container long center-alignment">
-                <h2 class="name">Cao Thanh Long</h2>
-                <p class="id">22001124</p>
+              <div class="thanhvien__container">
+                <div class="thanhvien__container-info">
+                  <p class="id">22001124</p>
+                  <h2 class="name">Cao Thanh Long</h2>
+                  <a href="#">See More</a>
+                </div>
                 <img src="img/Long.jpg" alt="" />
               </div>
             </div>
@@ -393,48 +492,155 @@
       </main>
 
       <footer class="footer">
-        <div class="footer__content content">
-          <div class="content__col1 col1 wrapper">
-            <div class="col1__content1">
-              <h3>About us</h3>
-              <div class="content1__imgs">
-                <img src="img/facebook.png" alt="" />
-                <img src="img/Twitter.png" alt="" />
-                <img src="img/Instagram.png" alt="" />
+        <video
+          class="footer__video"
+          muted=""
+          loop=""
+          autoplay
+          src="img/footer-bgVid.mp4"
+          type="video/mp4"
+        ></video>
+
+        <div class="footer__container">
+          <div class="footer__inner">
+            <div class="inner__wrapper">
+              <div class="inner__layout">
+                <div class="layout__item w-50">
+                  <h3 class="newsletter_title">
+                    Thank you for visiting our website and exploring it fully.
+                    We appreciate your time and interest.
+                  </h3>
+                </div>
+
+                <div class="layout__item w-25">
+                  <nav class="item__nav">
+                    <h4 class="nav__header">Menu</h4>
+                    <ul class="nav__ul">
+                      <li class="nav__li">
+                        <a href="#2">Suggestions</a>
+                      </li>
+
+                      <li class="nav__li">
+                        <a href="#3">Analytics</a>
+                      </li>
+
+                      <li class="nav__li">
+                        <a href="#4">Charity</a>
+                      </li>
+                      <li class="nav__li">
+                        <a href="#5">Members</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div class="layout__item w-25">
+                  <nav class="item__nav">
+                    <h4 class="nav__header">Reach out</h4>
+                    <ul class="nav__ul">
+                      <li class="nav__li">
+                        <a class="" onclick="open_Form()">Contact</a>
+                      </li>
+                      <li class="nav__li">
+                        <a> Tel: <b>(336) 292-4133 </b> </a>
+                      </li>
+                      <li class="nav__li">
+                        <a> Address: <b>4705 Rehobeth Church Rd </b> </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
-            </div>
+              <div class="inner__layout">
+                <div class="layout__item w-50 footer__brands">
+                  <ul class="layout__item-ul">
+                    <li class="layout__item-li">
+                      <img src="img/pizza.png" alt="" />
+                    </li>
+                    <li class="layout__item-li">
+                      <img src="img/kfc.png" alt="" />
+                    </li>
 
-            <div class="col1__content2">
-              <h3>Go Back</h3>
-              <nav class="col2__nav nav">
-                <ul class="nav__ul">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#2">Suggestion</a></li>
-                  <li><a href="#3">Analytics</a></li>
-                  <li><a href="#4">Charity</a></li>
-                  <li><a href="#5">Creator</a></li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class="col1__content3">
-              <h3>Contact Us</h3>
-              <p>
-                Contact Us Tel: <b> +1 225-777-1291 </b> <br />
-                Address: <b> 3091 Coventry Court</b> <br />
-                Email : <b>morris.ritchie@nicolas.biz</b>
-              </p>
+                    <li class="layout__item-li">
+                      <img src="img/cola.png" alt="" />
+                    </li>
+                    <li class="layout__item-li">
+                      <img src="img/mcdonalds.png" alt="" />
+                    </li>
+                    <li class="layout__item-li">
+                      <img src="img/french-fries.png" alt="" />
+                    </li>
+                  </ul>
+                </div>
+                <div class="layout__item w-25">
+                  <ul class="layout__item-ul footer__social">
+                    <li class="layout__item-li">
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="32"
+                          height="32"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z" />
+                          <path
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="layout__item-li">
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="32"
+                          height="32"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z" />
+                          <path
+                            d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="layout__item-li">
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="32"
+                          height="32"
+                        >
+                          <path fill="none" d="M0 0h24v24H0z" />
+                          <path
+                            d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="layout__item-goUp w-25">
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/ 2000/svg"
+                      viewBox="0 0 24 24"
+                      width="36"
+                      height="36"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="footer2__color">
-            <div class="content__col2 col2 wrapper">
-              <div class="col2__start">
-                <p>&copy; copyright 2024</p>
-              </div>
-              <div class="col2__end">
-                <a href=""><p>FastFood.io</p></a>
-              </div>
-            </div>
+          <div class="footer__copyright">
+            <p>&copy; 2024 Food.io Inc.</p>
           </div>
         </div>
       </footer>

@@ -40,13 +40,28 @@ window.addEventListener("load", () => {
     document.body.removeChild(loader);
   });
   hasloaded = true;
-  if (hasloaded) {
-    loadingHero.classList.toggle("reloading");
-    loadingNav.forEach((item) => {
-      item.classList.toggle("reloading");
-    });
+  loadingHero.classList.toggle("reloading");
+  loadingNav.forEach((item) => {
+    item.classList.toggle("reloading");
+  });
+});
+
+/* || goUp BUTTON  */
+const upDom = document.querySelector(".up");
+const heroDom = document.querySelector(".main__hero");
+const footerDom = document.querySelector("footer");
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= heroDom.offsetHeight) {
+    if (window.scrollY >= footerDom.offsetTop - footerDom.offsetHeight) {
+      upDom.classList.add("hiddenUp");
+    } else {
+      upDom.classList.remove("hiddenUp");
+    }
+  } else {
+    upDom.classList.add("hiddenUp");
   }
 });
+
 /* || MENU */
 const Button = document.querySelector(".navigation__button");
 const Open = document.querySelector(".Open");
@@ -64,28 +79,45 @@ Button.addEventListener("click", () => {
 function close_Nav() {
   toggleButton();
 }
-
+/* || MENU_HEIGHT_CHANGE */
+const navWrapperDom = document.querySelector(".navigation .wrapper");
+window.addEventListener("scroll", () => {
+  if (window.scrollY <= 0) {
+    navWrapperDom.classList.add("heightChange");
+  } else {
+    navWrapperDom.classList.remove("heightChange");
+  }
+});
 /* || HERO */
-var int;
-function setInt() {
-  clearInterval(int);
-  int = setInterval(() => {
-    var btns = document.getElementsByName("carousel");
+let carouselRunTime = 5000;
+let carouselTrigger;
+document.addEventListener("DOMContentLoaded", () => {
+  CarouselActivate(carouselRunTime);
+});
+heroDom.addEventListener("mouseover", () => {
+  CarouselActivate(99999999);
+});
+heroDom.addEventListener("mouseout", () => {
+  CarouselActivate(carouselRunTime);
+});
+function CarouselActivate(adjustableValue) {
+  clearInterval(carouselTrigger);
+  carouselTrigger = setInterval(() => {
+    let carouselButtonsDom = document.getElementsByName("carousel");
 
-    for (var i = 0; i < btns.length; i++) {
-      if (btns[i].checked) {
-        btns[i].checked = false;
-        if (i + 1 == btns.length) {
-          btns[0].checked = true;
+    for (let i = 0; i < carouselButtonsDom.length; i++) {
+      if (carouselButtonsDom[i].checked) {
+        carouselButtonsDom[i].checked = false;
+        if (i + 1 == carouselButtonsDom.length) {
+          carouselButtonsDom[0].checked = true;
         } else {
-          btns[i + 1].checked = true;
+          carouselButtonsDom[i + 1].checked = true;
         }
         return;
       }
     }
-  }, 4000);
+  }, adjustableValue);
 }
-setInt();
 
 /* FORM */
 const formEl = document.querySelector(".form__container");
