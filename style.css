@@ -863,6 +863,7 @@ form input[type="submit"]:is(:hover, :focus-visible) {
   text-shadow: 0px 1px 1px rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
+
 .main__thanhvien h1::after {
   content: "";
   position: absolute;
@@ -876,6 +877,9 @@ form input[type="submit"]:is(:hover, :focus-visible) {
     rgba(172, 4, 4, 1) 0%,
     rgba(65, 0, 0, 1) 100%
   );
+}
+.main__thanhvien h2 {
+  font-size: clamp(17px, 1vw, 22px);
 }
 .main__thanhvien .main__thanhvien-subheading {
   margin-bottom: 60px;
@@ -1289,7 +1293,7 @@ footer svg {
     box-shadow: none;
   }
   p {
-    font-size: 3vw;
+    font-size: clamp(16px, 3vw, 20px);
   }
   p:not(.form__subheading),
   h1:not(.form__heading),
@@ -1729,12 +1733,13 @@ form {
     height: 50px;
   }
   /* || THANHVIEN MQ2 */
+  .main__thanhvien h2 {
+  }
   .thanhvien__grid {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
-  .thanhvien__container img {
-  }
+
   /* FOOTER MQ2 */
   .inner__layout {
     display: flex;
