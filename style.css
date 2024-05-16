@@ -52,6 +52,7 @@ h1 {
   --Hero-Overlay-1: rgba(34, 3, 3, 0.444);
   --Hero-Overlay-2: rgba(45, 2, 2, 0.444);
   --Form-hover: hsl(0, 92%, 20%);
+  --Suggestion-Subheading: gray;
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -72,6 +73,7 @@ h1 {
     --Hero-Overlay-1: rgba(100, 80, 80, 0.444);
     --Hero-Overlay-2: rgba(90, 2, 2, 0.444);
     --Form-hover: hsl(0, 24%, 33%);
+    --Suggestion-Subheading: white;
   }
 }
 
@@ -377,12 +379,12 @@ main .main__hero {
   width: 50%;
   margin-bottom: 70px;
   text-align: center;
-  color: gray;
+  color: var(--Suggestion-Subheading);
   margin-inline: auto;
 }
 .main__noidung2 .noidung2__heading {
   width: 50%;
-  color: gray;
+  color: var(--Suggestion-Subheading);
   margin-bottom: 0px;
   text-align: center;
   margin-inline: auto;
@@ -414,7 +416,7 @@ main .main__hero {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   color: black;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 30px 30px;
   transition: 0.3s;
 }
