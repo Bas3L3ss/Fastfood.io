@@ -360,15 +360,94 @@ main .main__hero {
 }
 .autoRun .scroller__inner {
   padding-block: calc(var(--Padding-block) - 50px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 /* || NOIDUNG2 */
 .main__noidung2 .wrapper {
   padding-block: var(--Padding-block);
+}
+.main__noidung2 h1 {
+  color: var(--Hover-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main__noidung2 .noidung2__subheading {
+  width: 50%;
+  margin-bottom: 70px;
+  text-align: center;
+  color: gray;
+  margin-inline: auto;
+}
+.main__noidung2 .noidung2__heading {
+  width: 50%;
+  color: gray;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-inline: auto;
+}
+.main__noidung2 img {
+  box-shadow: none;
+}
+.noidung2__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  gap: 2rem;
+}
+.noidung2__container > * {
+  flex: 1;
+}
+.container__col {
+  align-content: center;
+}
+.container__col:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+.container__text {
+  --border-width: 4px;
+  --border-color: #250aa8;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: black;
+  background-color: white;
+  padding: 30px 30px;
+  transition: 0.3s;
+}
+.container__text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.container__text img {
+  margin-left: auto;
+}
+.container__text:hover {
+  transform: translateY(-5px);
 }
 
+.container__text.container__text-orange {
+  border: var(--border-width) solid var(--border-color);
+  border-top: 6px solid orange;
+}
+.container__text.container__text-red {
+  border: var(--border-width) solid var(--border-color);
+
+  border-top: 6px solid red;
+}
+.container__text.container__text-yellow {
+  border: var(--border-width) solid var(--border-color);
+
+  border-top: 6px solid yellow;
+}
+.container__text.container__text-brown {
+  border: var(--border-width) solid var(--border-color);
+
+  border-top: 6px solid brown;
+}
 /* || NOIDUNG3 */
 .main__noidung3 {
   margin-top: -12px;
@@ -443,17 +522,21 @@ main .main__hero {
   align-items: center;
 }
 .scroller {
-  max-width: 1000px;
+  max-width: 1200px;
 }
-.scroller__inner {
-  padding-block: calc(var(--Padding-block) - 40px);
+.scrollRun .scroller__inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 .scroller__inner img {
   box-shadow: none;
 }
+.scrollRun .scroller__inner img {
+  min-height: 400px;
+  min-width: 200px;
+  object-fit: cover;
+}
+
 .scroller[data-animated="true"] .scroller__inner img {
   width: 150px;
   height: 200px;
@@ -475,7 +558,6 @@ main .main__hero {
 .scroller[data-animated="true"] .scroller__inner {
   width: fit-content;
   flex-wrap: nowrap;
-  /* animation: scroll 5.5s linear infinite; */
   animation: scroll linear;
   animation-timeline: scroll(root);
 }
@@ -483,6 +565,11 @@ main .main__hero {
 /* || NOIDUNG4 */
 .main__noidung4 {
   background-color: var(--Bg-color2);
+}
+.main__noidung4 .wrapper.effect {
+  filter: blur(0);
+  transform: translate(0);
+  transition-duration: 2s;
 }
 
 .main__noidung4 .wrapper {
@@ -492,19 +579,36 @@ main .main__hero {
   color: var(--Hover-color);
   text-align: left;
 }
-.main__noidung4 .wrapper .noidung4__container {
+.noidung4__container {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   text-align: left;
 }
-.main__noidung4 .wrapper.effect {
-  filter: blur(0);
-  transform: translate(0);
-  transition-duration: 2s;
+.noidung4__container p {
+  color: rgb(204, 204, 204);
 }
-
+.noidung4__container-item {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+.noidung4__container-item p {
+  margin: 0;
+}
+.noidung4__container-item h3 {
+  font-size: 20px;
+}
+.item__disc {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: orange;
+  border-radius: 15px;
+  width: 50%;
+  height: 12px;
+}
 /* || PHANTICH */
 .main__phantich::before {
   content: "";
@@ -747,13 +851,35 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 
 .main__thanhvien {
   padding-block: var(--Padding-block);
-  background-color: rgb(169, 77, 38);
+  background-color: #a94d26;
 }
 .main__thanhvien h1 {
-  text-align: center;
-  text-shadow: 1px 1px 2px rgb(255, 0, 0);
-  color: black;
+  position: relative;
+  margin-bottom: 20px;
+  width: fit-content;
+  margin-inline: auto;
+  text-shadow: 0px 1px 1px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.main__thanhvien h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -10px;
+  left: 0;
+  background: rgb(172, 4, 4);
+  background: linear-gradient(
+    90deg,
+    rgba(172, 4, 4, 1) 0%,
+    rgba(65, 0, 0, 1) 100%
+  );
+}
+.main__thanhvien .main__thanhvien-subheading {
   margin-bottom: 60px;
+  width: 50%;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .thanhvien__grid {
@@ -783,6 +909,7 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 
 .thanhvien__container-info p {
   margin: 0;
+  margin-bottom: -5px;
   font-weight: 400;
   font-size: 1rem;
   color: var(--Hover-color);
@@ -791,6 +918,9 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 }
 .thanhvien__container-info h2 {
   word-spacing: 2px;
+}
+.thanhvien__container-info :is(h2, p):hover {
+  cursor: default;
 }
 .thanhvien__container-info a {
   display: inline-block;
@@ -823,7 +953,38 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 .thanhvien__container:not(:hover) .thanhvien__container-info {
   animation: thanhvienInformationDisappear 1s forwards;
 }
+.thanhvien__container--indicator {
+  position: absolute;
+  z-index: 2;
+  padding: var(--Padding-block);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: 0;
+  background-color: rgba(0, 0, 0, 0.299);
+  border-radius: 20px;
 
+  animation: thanhvienHintingEffect 4s infinite;
+}
+.thanhvien__container--indicator .indicator__hoverMouse {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.thanhvien__container:hover .thanhvien__container--indicator {
+  animation: unset;
+}
+@keyframes thanhvienHintingEffect {
+  33%,
+  100% {
+    opacity: 0;
+    visibility: 0;
+  }
+  66% {
+    opacity: 1;
+    visibility: 1;
+  }
+}
 @keyframes thanhvienInformationAppear {
   50% {
     transform: translate(-50%, -10.5rem);
@@ -1106,12 +1267,9 @@ footer svg {
     row-gap: 40px;
   }
   /* || NOIDUNG2 */
-  .noidung2__container.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .noidung2__container.container .center-alignment {
-    grid-column: span 2;
+
+  .wrapper .noidung2__container {
+    flex-direction: column;
   }
   /* || THANHVIEN MQ2*/
 }
@@ -1242,24 +1400,6 @@ footer svg {
   .noidung1__container {
     margin: 0 !important;
   }
-
-  /* || NOIDUNG 2 MQ*/
-  .main__noidung2 {
-    background-color: var(--Bg-color);
-  }
-}
-.noidung2__container {
-  margin-top: 30px;
-  text-align: left;
-  grid-template-columns: 1fr;
-  column-gap: 5px;
-}
-.main__noidung2 .wrapper .noidung2__container .container__text {
-  margin-bottom: 50px;
-}
-.main__noidung2 .wrapper h1 {
-  padding-block: 10px;
-  color: var(--Hover-color);
 }
 /* || NOIDUNG 3  MQ*/
 .main__noidung3 .wrapper h1::after {
@@ -1285,13 +1425,7 @@ footer svg {
   padding-top: calc(var(--Padding-block) / 3);
 }
 
-/* || NOIDUNG 4 MQ*/
-.main__noidung4 .wrapper .noidung4__container {
-  grid-template-columns: 1fr;
-}
-.main__noidung4 .wrapper .noidung4__container p:last-child {
-  margin-left: 0;
-}
+/* || PHANTICH MQ*  */
 
 .main__phantich h2,
 .main__phantich h1,
@@ -1312,10 +1446,6 @@ footer svg {
 form {
   width: 100%;
 }
-
-/* || THANHVIEN MQ* */
-
-/* ||FOOTER MQ */
 
 @media (min-width: 750px) {
   p {
@@ -1446,21 +1576,10 @@ form {
     z-index: 5;
   }
   /* || NOIDUNG 2 MQ2*/
-  .main__noidung2 {
-    background-color: var(--Bg-color);
+  .noidung2__container {
+    flex-direction: row;
   }
-  .main__noidung2 .wrapper .noidung2__container {
-    text-wrap: pretty;
-    margin-top: 20px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5px;
-  }
-  .main__noidung2 .wrapper h1 {
-    padding-block: 10px;
-    color: var(--Hover-color);
-  }
+
   /* || NOIDUNG 3 MQ2*/
   .main__noidung3 .wrapper h1::after {
     transform: scale(0, 1);
@@ -1491,13 +1610,19 @@ form {
   }
   /* || NOIDUNG 4 MQ2 */
   .noidung4__container {
-    margin-top: 20px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    text-align: left;
   }
-  .noidung4__container p:last-child {
-    margin-left: 10px;
+  .noidung4__container-item {
+    grid-template-columns: 20px 1fr;
+  }
+  .noidung4__container-item:nth-of-type(1) {
+    margin-top: 0;
+  }
+  .item__disc {
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 12px;
+    height: 50%;
   }
 
   /* || PHANTICH MQ2 */
@@ -1592,7 +1717,6 @@ form {
     width: 50px;
     height: 50px;
   }
-  /* || THANHVIEN MQ2*/
 
   /* FOOTER MQ2 */
   .inner__layout {
