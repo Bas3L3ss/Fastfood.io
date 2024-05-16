@@ -87,7 +87,7 @@ html {
   line-height: 2rem;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 .wrapper {
   margin: 0 auto;
@@ -1305,6 +1305,7 @@ footer svg {
     width: 100%;
     display: block;
     position: absolute;
+    overflow: hidden;
   }
   .hidden.navigation__nav .nav__ul {
     display: flex;
