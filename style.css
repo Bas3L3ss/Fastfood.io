@@ -620,7 +620,8 @@ main .main__hero {
 }
 .main__phantich {
   background-image: url(img/phantich.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .main__phantich .wrapper.effect {
@@ -633,6 +634,7 @@ main .main__hero {
   text-align: center;
   color: var(--Hover-color);
 }
+
 .main__phantich .wrapper .phantich__container {
   display: grid;
   gap: 5px;
@@ -692,9 +694,7 @@ main .main__hero {
   color: white;
   background-color: var(--Lines-color);
 }
-.main__contact img {
-  object-fit: cover;
-}
+
 /* || FORM */
 .form__container {
   transition: all 0.5s;
@@ -884,27 +884,27 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 
 .thanhvien__grid {
   display: grid;
+  width: 70%;
+  margin-inline: auto;
   gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
 }
 .thanhvien__container {
   overflow: hidden;
-
   border-radius: 20px;
   position: relative;
   min-height: 400px;
-  background-color: red;
 }
 .thanhvien__container img {
   box-shadow: none;
   border-radius: 20px;
-
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
+  object-fit: cover;
 }
 
 .thanhvien__container-info p {
@@ -934,11 +934,13 @@ form input[type="submit"]:is(:hover, :focus-visible) {
   z-index: 4;
   background-color: var(--Bg-color2);
   width: 80%;
-  bottom: -10rem;
+  bottom: -9rem;
   left: 50%;
   padding: 20px 30px;
   transform: translate(-50%);
   border-radius: 20px;
+  opacity: 0;
+  transition: opacity 1s 1s;
 }
 .thanhvien__container:hover {
   animation: thanhvienContainerRemove-overflow 2s forwards;
@@ -948,6 +950,8 @@ form input[type="submit"]:is(:hover, :focus-visible) {
 }
 .thanhvien__container:hover .thanhvien__container-info {
   animation: thanhvienInformationAppear 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .thanhvien__container:not(:hover) .thanhvien__container-info {
@@ -965,6 +969,7 @@ form input[type="submit"]:is(:hover, :focus-visible) {
   border-radius: 20px;
 
   animation: thanhvienHintingEffect 4s infinite;
+  align-content: center;
 }
 .thanhvien__container--indicator .indicator__hoverMouse {
   padding: 10px;
@@ -1272,9 +1277,12 @@ footer svg {
     flex-direction: column;
   }
   /* || THANHVIEN MQ2*/
+  .thanhvien__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 @media (max-width: 750px) {
-  img:not(.imgs__anchor img) {
+  img:not(.imgs__anchor img, .thanhvien__container img) {
     padding-inline: 10px;
     box-shadow: none;
   }
@@ -1718,7 +1726,13 @@ form {
     width: 50px;
     height: 50px;
   }
-
+  /* || THANHVIEN MQ2 */
+  .thanhvien__grid {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .thanhvien__container img {
+  }
   /* FOOTER MQ2 */
   .inner__layout {
     display: flex;
