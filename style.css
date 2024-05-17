@@ -97,7 +97,7 @@ html {
 }
 body {
   overflow-x: hidden;
-
+  width: 100%;
   background-color: var(--Bg-color);
   color: var(--Font-color);
 }
@@ -181,8 +181,10 @@ img {
 .navigation {
   background-color: var(--nav-Bg-color);
   backdrop-filter: blur(10px);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 99;
 }
 
@@ -1453,10 +1455,6 @@ footer svg {
 }
 
 @media (min-width: 750px) {
-  body {
-    width: 100%;
-    overflow-x: unset;
-  }
   p {
     font-size: clamp(1rem, 1.2vw, 2rem);
   }
