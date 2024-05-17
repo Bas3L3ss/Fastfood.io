@@ -96,7 +96,6 @@ html {
   width: 80%;
 }
 body {
-  overflow-x: hidden;
   width: 100%;
   background-color: var(--Bg-color);
   color: var(--Font-color);
