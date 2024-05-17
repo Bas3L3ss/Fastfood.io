@@ -1729,8 +1729,7 @@ footer svg {
     height: 50px;
   }
   /* || THANHVIEN MQ2 */
-  .main__thanhvien h2 {
-  }
+
   .thanhvien__grid {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
