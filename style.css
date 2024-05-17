@@ -96,7 +96,8 @@ html {
   width: 80%;
 }
 body {
-  width: 100%;
+  overflow-x: hidden;
+
   background-color: var(--Bg-color);
   color: var(--Font-color);
 }
@@ -1464,6 +1465,10 @@ form {
 }
 
 @media (min-width: 750px) {
+  body {
+    width: 100%;
+    overflow-x: unset;
+  }
   p {
     font-size: clamp(1rem, 1.2vw, 2rem);
   }
