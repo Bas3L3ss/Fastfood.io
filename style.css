@@ -614,6 +614,10 @@ main .main__hero {
   height: 12px;
 }
 /* || PHANTICH */
+.main__contact .wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 .main__phantich::before {
   content: "";
   display: block;
@@ -1250,11 +1254,6 @@ footer svg {
 .main__noidung3 .container__right.show {
   transform: translate(0);
 }
-/* || PHANTICH */
-.main__contact .wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 
 /* || MQ */
 
@@ -1284,7 +1283,17 @@ footer svg {
   .wrapper .noidung2__container {
     flex-direction: column;
   }
-  /* || THANHVIEN MQ2*/
+  /* ||NOIDUNG3  */
+  .wrapper .container__noidung3 .container__left {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--Padding-block);
+  }
+  .wrapper .container__noidung3 .container__right {
+    display: flex;
+    flex-direction: column;
+  }
+  /* || THANHVIEN */
   .thanhvien__grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -1423,15 +1432,6 @@ footer svg {
   transform: scale(0.75, 1);
   animation: none;
 }
-.container__noidung3 .container__left {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: var(--Padding-block);
-}
-.container__noidung3 .container__right {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 
 .container__right .container__textRight {
   order: 1;
@@ -1441,7 +1441,15 @@ footer svg {
 .container__left .container__textLeft {
   padding-top: calc(var(--Padding-block) / 3);
 }
-
+.container__noidung3 .container__left {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--Padding-block);
+}
+.container__noidung3 .container__right {
+  display: flex;
+  flex-direction: column;
+}
 /* || PHANTICH MQ*  */
 
 .main__phantich h2,
