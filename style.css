@@ -1319,6 +1319,10 @@ footer svg {
     display: flex;
     flex-direction: column;
   }
+  /* || NOIDUNG 4 */
+  .container__right .container__textRight {
+    order: 1 !important;
+  }
   /* || THANHVIEN */
   .thanhvien__grid {
     grid-template-columns: repeat(2, 1fr) !important;
