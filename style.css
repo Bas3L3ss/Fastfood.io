@@ -378,7 +378,7 @@ main .main__hero {
   text-align: center;
 }
 .main__noidung2 .noidung2__subheading {
-  width: 50%;
+  width: 70%;
   margin-bottom: 70px;
   text-align: center;
   color: var(--Suggestion-Subheading);
