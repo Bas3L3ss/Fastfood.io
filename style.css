@@ -261,6 +261,8 @@ img {
 
 /* || HERO */
 main .main__hero {
+  margin-top: 0px;
+
   width: 100%;
   height: 100vh;
   display: flex;
@@ -1504,6 +1506,9 @@ footer svg {
     transform: translateX(0);
   }
   /* | HERO MQ2 */
+  main .main__hero {
+    margin-top: 125px;
+  }
   .slide-btn {
     display: none;
   }
