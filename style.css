@@ -96,6 +96,7 @@ html {
   width: 80%;
 }
 body {
+  position: relative;
   overflow-x: hidden;
   width: 100%;
   background-color: var(--Bg-color);
@@ -729,16 +730,17 @@ main .main__hero {
 
 /* || FORM */
 .form__container {
-  transition: all 0.5s;
+  position: fixed;
   opacity: 1;
-
+  top: 0;
+  left: 0;
   height: 100%;
   display: grid;
   place-items: center;
   width: 100vw;
-  position: fixed;
   z-index: 1000000;
   backdrop-filter: blur(10px);
+  transition: all 0.5s;
 }
 form {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
