@@ -134,20 +134,21 @@ const firstTriggerStateDomPosition = triggerStateDom[0].offsetTop / 2;
 for (let i = 0; i < menuStateDom.length; i++) {
   window.addEventListener("scroll", () => {
     const triggerStateDomPosition = triggerStateDom[i].offsetTop;
+    const triggerStateDomPositionEnd =
+      triggerStateDom[i].offsetTop + triggerStateDom[i].offsetHeight;
     if (window.scrollY >= triggerStateDomPosition * 0.95) {
       resetState();
       menuStateDom[i].classList.add("stateTriggered");
     }
-    if (window.scrollY > triggerStateDomPosition * 1.2) {
+    if (
+      window.scrollY > triggerStateDomPositionEnd ||
+      window.scrollY < firstTriggerStateDomPosition
+    ) {
       resetState();
     }
   });
 }
-window.addEventListener("scroll", () => {
-  if (window.scrollY < firstTriggerStateDomPosition) {
-    resetState();
-  }
-});
+
 const resetState = () => {
   for (let j = 0; j < menuStateDom.length; j++) {
     menuStateDom[j].classList.remove("stateTriggered");
