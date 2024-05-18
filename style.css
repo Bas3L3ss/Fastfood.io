@@ -462,6 +462,7 @@ main .main__hero {
   background-color: var(--Bg-color2);
 }
 .main__noidung3 img {
+  max-height: 400px;
   object-fit: cover;
 }
 .main__noidung3 img:nth-child(1) {
@@ -498,10 +499,6 @@ main .main__hero {
 }
 .main__noidung3 .wrapper .container__noidung3 {
   margin-top: 10px;
-}
-.container__left img,
-.container__right img {
-  height: 100%;
 }
 
 .container__textLeft,
