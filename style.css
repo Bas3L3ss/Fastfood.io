@@ -732,6 +732,7 @@ main .main__hero {
 .form__container {
   position: fixed;
   opacity: 1;
+  visibility: visible;
   top: 0;
   left: 0;
   height: 100%;
@@ -774,6 +775,7 @@ form .close_form-img {
 .form__container.hidden {
   z-index: -1;
   opacity: 0;
+  visibility: hidden;
 }
 
 .form__container label:hover {
