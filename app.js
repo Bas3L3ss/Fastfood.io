@@ -32,7 +32,6 @@ function addAnimation() {
 window.addEventListener("load", () => {
   const loadingNav = document.querySelectorAll(".loadnav");
   const loadingHero = document.querySelector(".loadhero");
-  let hasloaded = false;
   const loader = document.querySelector(".loader");
 
   loader.classList.add("loader--hidden");
