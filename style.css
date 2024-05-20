@@ -245,6 +245,7 @@ img {
 .navigation .wrapper .navigation__button {
   padding: 0;
   margin: 0;
+  margin-right: 10px;
   width: 50px;
   border: none;
   background-color: var(--nav-Bg-color);
