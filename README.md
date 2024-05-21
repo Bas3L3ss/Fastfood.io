@@ -4,5 +4,6 @@ Hello there! Thank you for visiting my GitHub repository. This is my first proje
 
 This is simply a website about fast food, which currently serves no specific purpose and is merely a practice project.
 
-This is figma design ( including Wireframe ): https://www.figma.com/design/kmYMPWqiSOhC5cJgGpUoxK/FastFood.io?node-id=1-4&t=hMXQsPzNUahnBysb-0
-This is final deployed product ( used Netlify ): https://www.figma.com/design/kmYMPWqiSOhC5cJgGpUoxK/FastFood.io?node-id=1-4&t=hMXQsPzNUahnBysb-0
+This is figma design ( including Wireframe ): https://www.figma.com/design/kmYMPWqiSOhC5cJgGpUoxK/FastFood.io?node-id=1-4&t=hMXQsPzNUahnBysb-0.
+
+This is final deployed product ( used Netlify ): https://www.figma.com/design/kmYMPWqiSOhC5cJgGpUoxK/FastFood.io?node-id=1-4&t=hMXQsPzNUahnBysb-0.
