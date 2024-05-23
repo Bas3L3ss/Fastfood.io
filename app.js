@@ -38,7 +38,6 @@ window.addEventListener("load", () => {
   loader.addEventListener("transitionend", () => {
     document.body.removeChild(loader);
   });
-  hasloaded = true;
   loadingHero.classList.toggle("reloading");
   loadingNav.forEach((item) => {
     item.classList.toggle("reloading");
