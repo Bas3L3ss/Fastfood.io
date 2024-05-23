@@ -1483,6 +1483,19 @@ footer svg {
   .w-25 {
     width: 25%;
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .effect {
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+  }
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
   /* || NAVIGATION DESKTOP */
 
   .navigation {
@@ -1500,19 +1513,7 @@ footer svg {
   .navigation .wrapper .navigation__button {
     display: none;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    .effect {
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(-100%);
-      transition: all 1s;
-    }
-  }
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-  }
+
   /* | HERO DESKTOP */
   main .main__hero {
     margin-top: 125px;
