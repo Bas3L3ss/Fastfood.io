@@ -11,9 +11,27 @@
   text-wrap: pretty;
 }
 /* || ELEMENT INITIAL STYLE */
+
+html {
+  line-height: 2rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  overflow-x: hidden !important;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--Bg-color);
+  color: var(--Font-color);
+}
+
 img {
   display: block;
   max-width: 100%;
+  box-shadow: 0 0 2px 1px var(--Lines-color);
+
   height: auto;
 }
 input,
@@ -31,6 +49,31 @@ html:has(.loader) ::-webkit-scrollbar {
 h1 {
   font-size: 2rem;
 }
+
+li {
+  list-style: none;
+}
+a:any-link {
+  color: var(--FF);
+  text-decoration: none;
+}
+a:hover,
+a:focus-visible,
+.stateTriggered {
+  color: var(--Hover-color);
+}
+
+a:focus-visible {
+  outline: var(--Focus-outline);
+}
+
+section {
+  position: relative;
+}
+p {
+  margin-top: 10px;
+}
+
 /* || VARIABLES */
 :root {
   --FF: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -78,55 +121,13 @@ h1 {
 
 /* || UTILITY CLASSES */
 
-.hidden {
-  display: none;
-}
-
-/* || GENERAL STYLE */
-
-html {
-  line-height: 2rem;
-  scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
-  overflow-x: hidden !important;
-}
 .wrapper {
   margin: 0 auto;
   width: 80%;
 }
-body {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  background-color: var(--Bg-color);
-  color: var(--Font-color);
-}
 
-li {
-  list-style: none;
-}
-a:any-link {
-  color: var(--FF);
-  text-decoration: none;
-}
-a:hover,
-a:focus-visible,
-.stateTriggered {
-  color: var(--Hover-color);
-}
-
-a:focus-visible {
-  outline: var(--Focus-outline);
-}
-
-section {
-  position: relative;
-}
-p {
-  margin-top: 10px;
-}
-img {
-  box-shadow: 0 0 2px 1px var(--Lines-color);
+.hidden {
+  display: none;
 }
 
 /* || UP */
