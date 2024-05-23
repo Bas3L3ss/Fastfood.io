@@ -1291,7 +1291,7 @@ footer svg {
   body {
     overflow-x: hidden !important;
   }
-  /* || NOIDUNG1 */
+  /* || NOIDUNG1 IPAD */
   .main__noidung1 .wrapper img.hidden {
     display: block;
     grid-area: img2;
@@ -1311,12 +1311,12 @@ footer svg {
       "img2 text";
     row-gap: 40px;
   }
-  /* || NOIDUNG2 */
+  /* || NOIDUNG2 IPAD */
 
   .wrapper .noidung2__container {
     flex-direction: column;
   }
-  /* ||NOIDUNG3  */
+  /* ||NOIDUNG3 IPAD */
   .wrapper .container__noidung3 .container__left {
     display: flex;
     flex-direction: column;
@@ -1326,16 +1326,18 @@ footer svg {
     display: flex;
     flex-direction: column;
   }
-  /* || NOIDUNG 4 */
+  /* || NOIDUNG 4 IPAD */
   .container__right .container__textRight {
     order: 1 !important;
   }
-  /* || THANHVIEN */
+  /* || THANHVIEN IPAD */
   .thanhvien__grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 @media (max-width: 750px) {
+  /* ||ELEMENTS STYLES MOBILE*/
+
   img:not(.imgs__anchor img, .thanhvien__container img) {
     padding-inline: 10px;
     box-shadow: none;
@@ -1361,7 +1363,7 @@ footer svg {
   .body.closed {
     transform: translateY(200px);
   }
-  /* || NAVIGATION MQ */
+  /* || NAVIGATION MOBILE */
   .hidden.navigation__nav {
     margin-top: 10px;
     width: 100%;
@@ -1396,7 +1398,7 @@ footer svg {
     position: static;
     border-bottom: 5px solid black;
   }
-  /* || HERO MQ */
+  /* || HERO MOBILE */
   .main__hero.hero {
     display: grid;
     place-items: center;
@@ -1434,7 +1436,7 @@ footer svg {
     --Hero-color: white;
   }
 
-  /* || NOIDUNG1 MQ*/
+  /* || NOIDUNG1 MOBILE*/
   .main__noidung1 .wrapper img.hidden {
     display: none;
   }
@@ -1466,13 +1468,22 @@ footer svg {
 }
 
 @media (min-width: 750px) {
+  /* ||ELEMENTS STYLES DESKTOP*/
+
   body {
     overflow: unset;
   }
   p {
     font-size: clamp(1rem, 1.2vw, 2rem);
   }
-  /* || NAVIGATION MQ2 */
+  /* ||UTILS DESKTOP*/
+  .w-50 {
+    width: 50%;
+  }
+  .w-25 {
+    width: 25%;
+  }
+  /* || NAVIGATION DESKTOP */
 
   .navigation {
     box-shadow: 0 0 5px 0.5px grey;
@@ -1490,12 +1501,6 @@ footer svg {
     display: none;
   }
   @media (prefers-reduced-motion: no-preference) {
-    .w-50 {
-      width: 50%;
-    }
-    .w-25 {
-      width: 25%;
-    }
     .effect {
       opacity: 0;
       filter: blur(5px);
@@ -1508,7 +1513,7 @@ footer svg {
     filter: blur(0);
     transform: translateX(0);
   }
-  /* | HERO MQ2 */
+  /* | HERO DESKTOP */
   main .main__hero {
     margin-top: 125px;
   }
@@ -1594,17 +1599,17 @@ footer svg {
   #slide-btn-4:checked ~ .labels label[for="slide-btn-4"] {
     background-color: white;
   }
-  /* || NOIDUNG 1 MQ2*/
+  /* || NOIDUNG 1 DESKTOP*/
   .main__noidung1 .wrapper .noidung1__container .container__p {
     background-color: var(--Bg-color2);
     z-index: 5;
   }
-  /* || NOIDUNG 2 MQ2*/
+  /* || NOIDUNG 2 DESKTOP*/
   .noidung2__container {
     flex-direction: row;
   }
 
-  /* || NOIDUNG 3 MQ2*/
+  /* || NOIDUNG 3 DESKTOP*/
 
   .container__noidung3 .container__left {
     display: grid;
@@ -1627,7 +1632,7 @@ footer svg {
   .container__right .container__textRight {
     order: 0;
   }
-  /* || NOIDUNG 4 MQ2 */
+  /* || NOIDUNG 4 DESKTOP */
   .noidung4__container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1644,7 +1649,7 @@ footer svg {
     height: 50%;
   }
 
-  /* || PHANTICH MQ2 */
+  /* || PHANTICH DESKTOP */
   .main__phantich :is(h1, h2, h3) {
     padding-inline: 0;
     font-size: 2vw;
@@ -1656,7 +1661,7 @@ footer svg {
     grid-column: span 1;
   }
 
-  /* || SCROLL BAR MQ2 */
+  /* || SCROLL BAR DESKTOP */
 
   ::-webkit-scrollbar {
     width: 1.65em;
@@ -1674,7 +1679,7 @@ footer svg {
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--Scrollbar-track-hover);
   }
-  /* || CONTACT MQ2 */
+  /* || CONTACT DESKTOP */
   .main__contact .wrapper {
     grid-template-columns: 1fr 0.65fr;
   }
@@ -1702,7 +1707,7 @@ footer svg {
     transform: translateY(0);
     filter: blur(0);
   }
-  /* FORM MQ2*/
+  /* FORM DESKTOP*/
   form {
     width: 75%;
     padding: 30px 20px;
@@ -1736,14 +1741,14 @@ footer svg {
     width: 50px;
     height: 50px;
   }
-  /* || THANHVIEN MQ2 */
+  /* || THANHVIEN DESKTOP */
 
   .thanhvien__grid {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* FOOTER MQ2 */
+  /* FOOTER DESKTOP */
   .inner__layout {
     display: flex;
     flex-wrap: nowrap;
