@@ -620,7 +620,6 @@ main .main__hero {
   height: 12px;
 }
 /* || PHANTICH */
-
 .main__phantich::before {
   content: "";
   display: block;
