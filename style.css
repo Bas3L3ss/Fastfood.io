@@ -274,22 +274,6 @@ main .main__hero {
   align-items: center;
 }
 
-.main__hero::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(
-    left,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.25) 25%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  background-blend-mode: color;
-  background-size: cover;
-}
-
 .main__hero .hero__text {
   position: absolute;
   text-align: center;
