@@ -1,4 +1,4 @@
-/* || INTERSECTION OBSERVER */
+/* || INTERSECTION OBSERVER  REF#3*/
 const observer = new IntersectionObserver((elements) => {
   elements.forEach((element) => {
     if (element.isIntersecting) {
@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((elements) => {
 const hiddenEl = document.querySelectorAll(".effect");
 hiddenEl.forEach((el) => observer.observe(el));
 
-/* || SCROLLER EFFECT */
+/* || SCROLLER EFFECT REFJS#5  */
 const scrollers = document.querySelectorAll(".scroller");
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
@@ -28,7 +28,7 @@ function addAnimation() {
   });
 }
 
-/* || LOADER */
+/* || LOADER REFJS#1*/
 window.addEventListener("load", () => {
   const loadingNav = document.querySelectorAll(".loadnav");
   const loadingHero = document.querySelector(".loadhero");
@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
   });
 });
 
-/* || goUp BUTTON  */
+/* || goUp BUTTON REFJS#0 */
 const upDom = document.querySelector(".up");
 const heroDom = document.querySelector(".main__hero");
 const footerDom = document.querySelector("footer");
@@ -60,7 +60,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-/* || MENU */
+/* || MENU REFJS#4 */
 const Button = document.querySelector(".navigation__button");
 const Open = document.querySelector(".Open");
 const Close = document.querySelector(".Close");
@@ -77,7 +77,7 @@ Button.addEventListener("click", () => {
 function close_Nav() {
   toggleButton();
 }
-/* || MENU_HEIGHT_CHANGE */
+/* || MENU_HEIGHT_CHANGE REFJS#2 */
 const navWrapperDom = document.querySelector(".navigation .wrapper");
 window.addEventListener("scroll", () => {
   if (window.scrollY <= 0) {
@@ -86,7 +86,7 @@ window.addEventListener("scroll", () => {
     navWrapperDom.classList.remove("heightChange");
   }
 });
-/* || HERO */
+/* || HERO  REFJS#6*/
 let carouselRunTime = 5000;
 let carouselTrigger;
 document.addEventListener("DOMContentLoaded", () => {
@@ -116,7 +116,7 @@ function CarouselActivate(adjustableValue) {
   }, adjustableValue);
 }
 
-/* || FORM */
+/* || FORM REFJS#7 */
 const formEl = document.querySelector(".form__container");
 function open_Form() {
   formEl.classList.remove("hidden");
@@ -124,7 +124,7 @@ function open_Form() {
 function close_Form() {
   formEl.classList.add("hidden");
 }
-/* || triggerMenu */
+/* || triggerMenu REFJS#8 */
 const menuStateDom = document.querySelectorAll("#state");
 const triggerStateDom = document.querySelectorAll(".triggerState");
 const firstTriggerStateDomPosition = triggerStateDom[0].offsetTop / 2;
