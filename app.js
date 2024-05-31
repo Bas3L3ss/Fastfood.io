@@ -151,3 +151,48 @@ const resetState = () => {
     menuStateDom[j].classList.remove("stateTriggered");
   }
 };
+
+/* CUSTOM CURSOR */
+const onPointerMove = (e) => {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+  const finalX = mouseX - 20;
+  const finalY = mouseY - 20;
+  pointer.animate(
+    {
+      transform: `translate3d(${finalX}px, ${finalY}px, 0)`,
+    },
+    { duration: 850, fill: "forwards" }
+  );
+};
+
+const pointer = document.querySelector(".cursor");
+window.addEventListener("mousemove", onPointerMove);
+window.addEventListener("scroll", onPointerMove);
+
+function isClickable(element) {
+  const clickableTags = ["A", "BUTTON", "INPUT", "SELECT", "TEXTAREA", "LABEL"];
+  while (element) {
+    if (
+      clickableTags.includes(element.tagName) ||
+      element.hasAttribute("onclick")
+    ) {
+      return true;
+    }
+    element = element.parentElement;
+  }
+  return false;
+}
+document.addEventListener("mouseover", (event) => {
+  if (isClickable(event.target)) {
+    console.log("hi");
+
+    pointer.classList.add("active");
+  }
+});
+document.addEventListener("mouseout", (event) => {
+  if (isClickable(event.target)) {
+    console.log("hi");
+    pointer.classList.remove("active");
+  }
+});

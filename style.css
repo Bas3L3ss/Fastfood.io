@@ -2,8 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&family=Rubik:wght@400;500;700&display=swap");
 
-/* || RESET */
-
+/* || SMOOTH SCROLL #DONT TOUCH */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -24,6 +23,7 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+/* || RESET */
 *,
 *::after,
 *::before {
@@ -152,7 +152,55 @@ p {
 .hidden {
   display: none;
 }
-
+/* || CURSOR */
+/* body {
+  cursor: none;
+}
+a:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+select:hover,
+label:hover {
+  cursor: none !important;
+} */
+@media (min-width: 750px) {
+  .cursor {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    z-index: 9999999999999999999999999;
+    transition: scale 0.2s;
+  }
+  .cursor.active {
+    mix-blend-mode: exclusion;
+    animation: width-change forwards 0.5s;
+  }
+  .cursor:not(.active) {
+    animation: width-change-reverse forwards 0.5s;
+  }
+  @keyframes width-change {
+    to {
+      width: 70px;
+    }
+  }
+  @keyframes width-change-reverse {
+    from {
+      width: 70px;
+    }
+    to {
+      width: 40px;
+    }
+  }
+}
 /* || UP */
 
 .up.hiddenUp a {
